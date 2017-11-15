@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-document.write("Webpack is up and running");
+document.write("Webpack is up and running. I'm watching for changes. AYYYYY");
 
 
 /***/ })
