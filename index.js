@@ -1,1 +1,9 @@
-document.write("Webpack is up and running. I'm watching for changes. AYYYYY");
+class Car {
+  manufacturer(car) {
+    document.write(`I have a ${car}`)
+  }
+}
+
+const volvo = new Car;
+
+volvo.manufacturer('volvo');
