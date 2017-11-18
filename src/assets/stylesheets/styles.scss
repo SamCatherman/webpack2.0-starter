@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+$brand-orange: #FFA233;
+$brand-blue: #339FFF;
+$font-size: 3rem;
+$muli: "Muli", sans-serif;
+
+body {
+  height: 100vh;
+  background-color: $brand-blue;
+  color: $brand-orange;
+  font-size: $font-size;
+  font-weight: 500;
+  font-family: $muli;
+
+}

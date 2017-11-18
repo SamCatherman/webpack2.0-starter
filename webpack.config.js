@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin');
 
 
 // config object
@@ -28,7 +29,13 @@ let config = {
           use: ['css-loader', 'sass-loader'],
           'fallback': 'style-loader'
         })
-      }
+      },
+      //loader for files ending in .jsx
+      {
+      test: /\.jsx$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader'
+    }
     ]
   },
   //call ExtractTextWebpackPlugin constructor and link css file
@@ -53,6 +60,7 @@ module.exports = config;
 //only uglify if production script is run
 if (process.env.NODE_ENV === 'production') {
   module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    new OptimizeCssAssets()
   );
 }

@@ -6,4 +6,4 @@ At its most basic level, aside from installing a few dependencies webpack seems 
 
 11/16: Adding functionality through the webpack.config file seems to be a useful pattern. So far I've added watch, babel, and loaders for es6 and scss.
 
-11/18: Added an organizational structure for the growing codebase in my webpack starter project. I extracted my SCSS to a dedicated file, added a dev-server to run on localhost, and refactored the hot-reloading to work with it. 
+11/18: Added an organizational structure for the growing codebase in my webpack starter project. I extracted my SCSS to a dedicated file, added a dev-server to run on localhost, and refactored the hot-reloading to work with it. Added plugins to minify js and css files for production. I'm going to stop here and switch to a new branch so I can add in some features from react. 
