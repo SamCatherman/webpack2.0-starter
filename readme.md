@@ -8,4 +8,6 @@ At its most basic level, aside from installing a few dependencies webpack seems 
 
 11/18: Added an organizational structure for the growing codebase in my webpack starter project. I extracted my SCSS to a dedicated file, added a dev-server to run on localhost, and refactored the hot-reloading to work with it. Added plugins to minify js and css files for production.
 
-I switched to a new branch so I can add in some features from react. 
+I switched to a new branch so I can add in some features from react.
+
+Added image loader, with various parameters for different types of image files. There is a lot going on in here, and I'd definitely be interested to unpack some of the parameters set.
