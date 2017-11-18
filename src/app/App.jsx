@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import miles from '../assets/images/miles.png'
+
 
 const hello = () => {
   return (
-    <div>
-      <h1>Hello from inside React!</h1>
+    <div className="container">
+      <h2>Smooth</h2>
+
+      <div className="image-wrapper">
+        <img src={miles} />
+      </div>
     </div>
   )
 }
