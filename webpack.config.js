@@ -2,6 +2,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 
 // config object
@@ -32,7 +33,7 @@ let config = {
   },
   //call ExtractTextWebpackPlugin constructor and link css file
   plugins: [
-    new ExtractTextWebpackPlugin('styles.css')
+    new ExtractTextWebpackPlugin('styles.css'),
   ],
   //sets directory to serve HTML content from, fallback to index.html on SPAs,
   //inline mode(set false to disable including client scripts), and open default browser while launching.
@@ -48,3 +49,10 @@ let config = {
 
 // export
 module.exports = config;
+
+//only uglify if production script is run
+if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+}
