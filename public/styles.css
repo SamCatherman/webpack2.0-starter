@@ -1,1 +1,12 @@
-body{background-color:red}
+@import url(https://fonts.googleapis.com/css?family=Muli);body {
+  height: 100vh;
+  background-color: #339FFF;
+  color: #FFA233;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Muli", sans-serif; }
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center; }
