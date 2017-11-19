@@ -31,10 +31,10 @@ let config = {
       {
         test: /\.scss$/,
         //call plugin's extract method
-        use: ExtractTextWebpackPlugin.extract({
+        use: ['css-hot-loader'].concat(ExtractTextWebpackPlugin.extract({
+          'fallback': 'style-loader',
           use: ['css-loader', 'sass-loader'],
-          'fallback': 'style-loader'
-        })
+        })),
       },
       //loader for files ending in .jsx, to compile into vanillaJS
       {
