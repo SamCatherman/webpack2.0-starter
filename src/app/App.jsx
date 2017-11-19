@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import miles from '../assets/images/miles.png'
+import miles from 'images/miles'
 
 
 const hello = () => {
