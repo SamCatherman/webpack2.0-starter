@@ -12,5 +12,10 @@ body {
   font-size: $font-size;
   font-weight: 500;
   font-family: $muli;
+}
 
+.container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
