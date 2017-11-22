@@ -4,7 +4,7 @@ const path = require('path');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin');
-
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 // config object
 let config = {
@@ -71,6 +71,7 @@ let config = {
   //call ExtractTextWebpackPlugin constructor and link css file
   plugins: [
     new ExtractTextWebpackPlugin('styles.css'),
+    new DashboardPlugin(), //webpack dashboard
   ],
   //sets directory to serve HTML content from, fallback to index.html on SPAs,
   //inline mode(set false to disable including client scripts), and open default browser while launching.
